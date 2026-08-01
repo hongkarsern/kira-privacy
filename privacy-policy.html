@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — kira</title>
+<meta name="description" content="kira's privacy policy — what the app collects, why, and the controls you have over it.">
+<style>
+  :root {
+    --ground: #F5F0E8;
+    --card: #FBF8F2;
+    --ink: #2A2620;
+    --muted: #6E6A5F;
+    --faint: #8A8578;
+    --accent: #2D5A27;
+    --accent-soft: #E4ECDF;
+    --rule: #E2DBCD;
+    --rule-strong: #D2C9B6;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #17150F;
+      --card: #211E17;
+      --ink: #EDE7DA;
+      --muted: #A8A290;
+      --faint: #857F6E;
+      --accent: #8FBF84;
+      --accent-soft: #253021;
+      --rule: #322E24;
+      --rule-strong: #423D2F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #17150F;
+    --card: #211E17;
+    --ink: #EDE7DA;
+    --muted: #A8A290;
+    --faint: #857F6E;
+    --accent: #8FBF84;
+    --accent-soft: #253021;
+    --rule: #322E24;
+    --rule-strong: #423D2F;
+  }
+  :root[data-theme="light"] {
+    --ground: #F5F0E8;
+    --card: #FBF8F2;
+    --ink: #2A2620;
+    --muted: #6E6A5F;
+    --faint: #8A8578;
+    --accent: #2D5A27;
+    --accent-soft: #E4ECDF;
+    --rule: #E2DBCD;
+    --rule-strong: #D2C9B6;
+  }
+
+  * { box-sizing: border-box; }
+
+  .page {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 18px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    padding: 0 24px 96px;
+  }
+
+  .wrap { max-width: 720px; margin: 0 auto; }
+
+  /* Header */
+  header.masthead {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 0 28px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px 24px;
+  }
+  .wordmark {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .wordmark .dot {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--accent);
+    display: inline-block;
+  }
+  .masthead .meta {
+    font-family: var(--sans);
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+
+  /* Title block */
+  .titleblock { padding: 56px 0 8px; }
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 18px;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(36px, 6vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0 0 22px;
+  }
+  .lede {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 8px;
+    max-width: 60ch;
+  }
+  .contact-inline { color: var(--accent); font-weight: 600; }
+
+  /* Section rhythm */
+  section { padding-top: 44px; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin: 0 0 6px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+  }
+  h2 .num {
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 3px 9px;
+    line-height: 1;
+    position: relative;
+    top: -2px;
+    font-variant-numeric: tabular-nums;
+  }
+  h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 19px;
+    margin: 28px 0 4px;
+    color: var(--ink);
+  }
+  p { margin: 14px 0; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; text-decoration-thickness: 1px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  strong { font-weight: 700; }
+  ul { margin: 14px 0; padding-left: 22px; }
+  li { margin: 8px 0; }
+
+  /* Data tables */
+  .table-scroll {
+    overflow-x: auto;
+    margin: 22px 0;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    background: var(--card);
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    min-width: 460px;
+  }
+  thead th {
+    text-align: left;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--faint);
+    padding: 14px 18px;
+    background: transparent;
+    border-bottom: 1px solid var(--rule-strong);
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 13px 18px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    color: var(--ink);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody td:first-child { font-weight: 600; color: var(--ink); white-space: nowrap; }
+  @media (max-width: 560px) {
+    tbody td:first-child { white-space: normal; }
+  }
+
+  /* Callout */
+  .callout {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 22px;
+    margin: 26px 0;
+    font-size: 16.5px;
+    color: var(--ink);
+  }
+  .callout p { margin: 6px 0; }
+  .callout strong { color: var(--accent); }
+
+  /* Contact footer card */
+  .contact-card {
+    margin-top: 52px;
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 28px 30px;
+  }
+  .contact-card .label {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+    margin: 0 0 10px;
+  }
+  .contact-card .name { font-size: 19px; font-weight: 600; margin: 0 0 2px; }
+  .contact-card .email { font-family: var(--sans); font-size: 16px; }
+
+  footer.foot {
+    max-width: 720px;
+    margin: 48px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--faint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="page">
+  <header class="masthead">
+    <div class="wordmark"><span class="dot"></span>kira</div>
+    <div class="meta">Privacy Policy · Updated 18 July 2026</div>
+  </header>
+
+  <div class="wrap">
+    <div class="titleblock">
+      <p class="eyebrow">Your money, your data</p>
+      <h1>Privacy Policy</h1>
+      <p class="lede">
+        kira is a personal and shared expense tracker. This policy explains what the app
+        collects, why, who it's shared with, and the control you have over it — in plain
+        language, no fine-print games.
+      </p>
+      <p class="lede" style="margin-top:14px;">
+        Questions? Email <a class="contact-inline" href="mailto:hongkarsern3@gmail.com">hongkarsern3@gmail.com</a>.
+      </p>
+    </div>
+
+    <div class="callout">
+      <p><strong>The short version.</strong> We don't sell your data. We don't run ads or
+      track you across other apps. Your Face ID never leaves your phone, and we never see
+      your card details. Everything below is the detail behind those promises.</p>
+    </div>
+
+    <section>
+      <h2><span class="num">01</span>Who we are</h2>
+      <p>
+        kira is provided by Hong Kar Sern, an individual developer based in Malaysia. For
+        the purposes of Malaysia's Personal Data Protection Act 2010 (PDPA) and, where it
+        applies, the EU/UK GDPR, we are the data controller for the personal data described
+        here. By creating an account, you agree to this policy.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">02</span>Information we collect</h2>
+      <p>We collect only what the app needs to work.</p>
+
+      <h3>Information you give us</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>Email address</td><td>Account creation, sign-in, recovery, and transactional email</td></tr>
+            <tr><td>Password</td><td>Authentication — stored only as a secure hash by our auth provider; we never see it</td></tr>
+            <tr><td>Display name</td><td>Shown on your profile and to members of groups and households you join</td></tr>
+            <tr><td>Profile avatar</td><td>Optional; shown on your profile and in shared groups</td></tr>
+            <tr><td>Transactions</td><td>Amounts, categories, notes, dates, and currency you enter to track spending</td></tr>
+            <tr><td>Budgets &amp; recurring expenses</td><td>Budget limits and scheduled expenses you configure</td></tr>
+            <tr><td>Groups, expenses &amp; splits</td><td>Shared expenses and balances between you and people you split costs with</td></tr>
+            <tr><td>Households &amp; shared budgets</td><td>Budgets shared with a partner or household member you invite</td></tr>
+            <tr><td>Friends</td><td>People you connect with to split expenses</td></tr>
+            <tr><td>Receipt images</td><td>Optional photos you attach to an expense, stored so you can view them later</td></tr>
+            <tr><td>Custom categories &amp; rules</td><td>Personalising how your spending is organised</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Information collected automatically</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Data</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td>User ID</td><td>A random identifier that links your data to your account</td></tr>
+            <tr><td>Push notification token</td><td>Sending budget alerts and group activity — only if you enable notifications</td></tr>
+            <tr><td>Device locale</td><td>Showing the app in your language and currency format</td></tr>
+            <tr><td>Crash &amp; error diagnostics</td><td>Detecting and fixing bugs (via Sentry)</td></tr>
+            <tr><td>Product usage events</td><td>Understanding which features are used, to improve the app (via PostHog)</td></tr>
+            <tr><td>Subscription status</td><td>Managing Pro access and entitlements (via RevenueCat)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Information stored only on your device</h3>
+      <p>
+        <strong>Biometric data (Face ID, Touch ID, or fingerprint).</strong> If you enable
+        app lock, unlocking is handled entirely by your device's operating system. We never
+        receive, see, or store your biometric data.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">03</span>Payments</h2>
+      <p>
+        Purchases of kira Pro are processed by the <strong>Apple App Store</strong> or
+        <strong>Google Play</strong>, and entitlements are managed by
+        <strong>RevenueCat</strong>. We do not collect or store your credit card or payment
+        details — the app store you purchased through handles those. We receive only your
+        subscription status (active or expired) and a purchase identifier.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">04</span>How your information is shared</h2>
+      <p>
+        We share data only with the service providers that operate the app on our behalf,
+        and only as needed to run the service.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Provider</th><th>Role</th><th>Data</th></tr></thead>
+          <tbody>
+            <tr><td>Supabase</td><td>Backend database, authentication &amp; file storage</td><td>All account and app data in Section 2, plus email and receipts</td></tr>
+            <tr><td>Sentry</td><td>Crash &amp; error reporting</td><td>Diagnostic data, user ID</td></tr>
+            <tr><td>PostHog</td><td>Product analytics (United States)</td><td>Usage events, user ID, Pro status</td></tr>
+            <tr><td>RevenueCat</td><td>Subscription management</td><td>User ID, purchase / subscription status</td></tr>
+            <tr><td>Apple / Google</td><td>In-app purchase processing</td><td>Payment details (handled by them, not us)</td></tr>
+            <tr><td>Expo</td><td>Push notification delivery</td><td>Push token</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        <strong>Other users</strong> see limited data by design. When you join a group or
+        household or add a friend, those people can see your display name, avatar, and the
+        shared expenses, splits, and balances relevant to that group or household. They
+        cannot see your private transactions, budgets, or receipts.
+      </p>
+      <p>
+        We may also disclose information if required by law, or to protect the rights,
+        safety, or property of our users or the app.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">05</span>Data retention</h2>
+      <p>
+        We keep your data for as long as your account exists. If you delete your account,
+        your personal data — transactions, budgets, receipts, and friends — is permanently
+        deleted. Data you contributed to shared groups may remain visible to other members
+        where it's needed for their own records (for example, a settled balance).
+      </p>
+      <p>
+        Diagnostic and aggregated analytics data may be retained by our providers for a
+        limited period under their own retention policies.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">06</span>Your rights</h2>
+      <p>Depending on where you live, you have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> the personal data we hold about you.</li>
+        <li><strong>Correct</strong> inaccurate data — you can edit most of it directly in the app.</li>
+        <li><strong>Delete</strong> your account and personal data.</li>
+        <li><strong>Export</strong> your data.</li>
+        <li><strong>Withdraw consent</strong> for optional processing such as notifications or analytics.</li>
+      </ul>
+      <p>
+        To exercise any of these, use the in-app controls or email
+        <a href="mailto:hongkarsern3@gmail.com">hongkarsern3@gmail.com</a>. We'll respond
+        within the timeframe required by applicable law.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">07</span>Account deletion</h2>
+      <p>
+        You can delete your account at any time from <strong>Settings → Profile → Delete
+        Account</strong> in the app. This permanently erases your expenses, budgets,
+        receipts, and friends, and cannot be undone. You may also request deletion by
+        emailing us.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">08</span>Security</h2>
+      <p>
+        Data is transmitted over encrypted connections (HTTPS/TLS) and stored by our
+        providers with access controls and row-level security, so each user can only reach
+        their own data and the data explicitly shared with them. No method of transmission
+        or storage is completely secure, but we take reasonable measures to protect your
+        information.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">09</span>Children's privacy</h2>
+      <p>
+        kira is not directed to children under 13, or the minimum age of digital consent in
+        your country. We do not knowingly collect data from children. If you believe a child
+        has provided us data, contact us and we will delete it.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">10</span>International transfers</h2>
+      <p>
+        Your data may be processed on servers located outside your country, including the
+        United States. Where required, we rely on our providers' appropriate safeguards for
+        such transfers.
+      </p>
+    </section>
+
+    <section>
+      <h2><span class="num">11</span>Changes to this policy</h2>
+      <p>
+        We may update this policy from time to time. Material changes will be reflected by
+        updating the "Last updated" date at the top and, where appropriate, notified in the
+        app.
+      </p>
+    </section>
+
+    <div class="contact-card">
+      <p class="label">Contact</p>
+      <p class="name">Hong Kar Sern</p>
+      <p class="email"><a href="mailto:hongkarsern3@gmail.com">hongkarsern3@gmail.com</a></p>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <span>kira — Expense tracking</span>
+    <span>Last updated 18 July 2026</span>
+  </footer>
+</div>
+</body>
+</html>
