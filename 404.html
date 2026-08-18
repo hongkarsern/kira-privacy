@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>kira — open your invite</title>
+  <style>
+    :root { --forest:#2D5A27; --sand:#F5F0E8; --ink:#1c2b1a; --muted:#5b6b58; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      background:var(--sand); color:var(--ink); padding:24px;
+    }
+    .card { max-width:420px; width:100%; text-align:center; }
+    .logo { font-size:34px; font-weight:800; color:var(--forest); letter-spacing:-.5px; margin:0 0 8px; }
+    h1 { font-size:22px; margin:16px 0 8px; }
+    p { color:var(--muted); line-height:1.5; margin:0 0 24px; }
+    .btn {
+      display:block; text-decoration:none; padding:15px 20px; border-radius:14px;
+      font-weight:600; font-size:16px; margin:12px 0;
+    }
+    .btn-primary { background:var(--forest); color:#fff; }
+    .btn-secondary { background:#fff; color:var(--forest); border:1.5px solid var(--forest); }
+    .hint { font-size:13px; color:var(--muted); margin-top:24px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="logo">kira</p>
+    <h1 id="headline">Open your invite in the app</h1>
+    <p id="sub">If you have kira installed, this link opens it automatically. Otherwise, install the app first, then tap the invite link again.</p>
+
+    <!-- TODO: replace with real store URLs once live -->
+    <a class="btn btn-primary" id="ios" href="https://apps.apple.com/app/idREPLACE_APP_ID">Download on the App Store</a>
+    <a class="btn btn-secondary" id="android" href="https://play.google.com/store/apps/details?id=com.hongkarsern.kira">Get it on Google Play</a>
+
+    <p class="hint">kira — a simple expense &amp; group-split tracker.</p>
+  </div>
+
+  <script>
+    // Tailor the copy to the invite type based on the path the user landed on.
+    var path = window.location.pathname || '';
+    if (path.indexOf('/household/join') === 0) {
+      document.getElementById('headline').textContent = 'You have been invited to a shared household';
+    } else if (path.indexOf('/join') === 0) {
+      document.getElementById('headline').textContent = 'You have been invited to a group';
+    }
+    // Show only the relevant store button on mobile.
+    var ua = navigator.userAgent || '';
+    if (/android/i.test(ua)) { document.getElementById('ios').style.display = 'none'; }
+    else if (/iphone|ipad|ipod/i.test(ua)) { document.getElementById('android').style.display = 'none'; }
+  </script>
+</body>
+</html>

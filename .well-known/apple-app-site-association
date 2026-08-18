@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "C5G386WQHQ.com.hongkarsern.kira",
+        "paths": [
+          "/join/*",
+          "/household/join/*"
+        ]
+      }
+    ]
+  }
+}
